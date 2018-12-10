@@ -1,6 +1,6 @@
 var mongoose = require('../config/mongoose.js');
 var GameSchema = new mongoose.Schema({
-    gold: {type: Number},
+    gold: {type: Number, default: 0},
     activities: {type: [String]}
 }, {timestamps: true});
 

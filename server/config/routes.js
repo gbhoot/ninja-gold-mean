@@ -5,7 +5,7 @@ module.exports = function(app) {
         console.log("Do I Need this?");
     });
 
-    app.post('/visit/:place', function(req, res) {
+    app.get('/visit/:place', function(req, res) {
         games.visitLocale(req, res);
     });
 
@@ -19,5 +19,9 @@ module.exports = function(app) {
 
     app.get('/getGames', function(req, res) {
         games.getGames(req, res);
-    })
+    });
+
+    app.get('/removeAllGames', function(req, res) {
+        games.removeGames(req, res);
+    });
 }
